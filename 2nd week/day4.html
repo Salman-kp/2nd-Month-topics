@@ -6,8 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    // Example for js recursion 
-//countdown
+      <h1>shallow copy</h1>
+   <p>in nested objects case will modify the parent object property
+    value if cloned object property value is changed but
+    <h2> deep copy  </h2>
+    will not modify the parent object property value
+   </p>
+    <script>
+         // Example for js recursion 
+//countdown 
 
 // function countoun(n){
 //     if(n==0){
@@ -28,5 +35,72 @@
 
 // console.log(factorial(5)); 
 
+
+// let obj={name:"salman", ql:[first:"bca",second:"+2" ,age:21}
+// let  shallowcopy={...obj}
+// shallowcopy.age=20
+// shallowcopy.name="sinan"
+// shallowcopy.ql.second="flutter"
+
+// console.log(obj)
+// console.log(shallowcopy)
+// in array
+// let obj={name:"salman",ql:["bca","flutter"],age:21}
+// let shallow={...obj}
+// shallow.name="sinan"
+// shallow.ql[0]="Mca"
+//  console.log(obj)
+//  console.log(shallow)
+
+
+//let ori={name:"salman",age:21,address:{district:"malappuram",
+//     place:"mankada pallippuram"}}
+
+// // Shallow Copy
+// // let shallow={...ori}
+// // shallow.name="fathima"
+// // shallow.age="19"
+// // /* heare the shallow trying to change the place that canot change
+// // bcause the inner object are sharing same memory
+// // any chage in the shallow the origin automaticall change*/
+// // shallow.address.place="pallippuram"
+// // console.log(ori)
+// // console.log(shallow)
+
+// //Deep copy
+// /* heare  if you are trying to change deep copy   and the origin never change 
+// only chage the deep copy*/
+// let deep=JSON.parse(JSON.stringify(ori))
+// deep.name="fathima"
+// deep.age=19
+// deep.address.place="Manjeri"
+// console.log(ori)
+// console.log(deep)
+
+/* Memoization  its using reduse the work of function */
+
+// function memo(){
+//     const main={}
+//     return function(n){
+//         if(main[n]){
+//             console.log("its already fined")
+//             return main[n]
+//         }else{
+//             console.log("Starting to calculate")
+//             const result=n*n
+//             main[n]=result;
+//             return result;
+//         }
+//     };
+// }
+
+// let sum=memo();
+// console.log(sum(5))
+// console.log(sum(5))
+
+
+
+    </script>
+ 
 </body>
-</html>
+</html> 
