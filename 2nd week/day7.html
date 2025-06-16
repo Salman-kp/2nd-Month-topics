@@ -52,14 +52,50 @@
 // a()
 
 
+//---------------- Currying ---------------------------
+
+// function sum(a){
+//   return function first(b){
+//       return function second(c){
+//           return a+b+c
+//       }
+//   }
+// }
+// console.log(sum(2)(3)(5))
+
+// ------------------Shadowing-----------
+
+// let a=10
+// function shadow(){
+//     let a=30
+//     console.log(a)
+// }
+// shadow()
+
+//--------------------- Coersion----------
+    //---------------- implicity----
+// console.log("10" + 11)
+// console.log("10" - 11)
+
+// --------------Explicity----------------
+
+// let num =Number("102")
+// let string=String(12)
+// let bool=Boolean(1)
+// console.log(num)
+// console.log(string)
+// console.log(bool)
 
 
-
-
-
-
-
-
+function student(greet){
+    console.log(`my name is ${this.name} i'm  ${this.age} year's old  i have complited my   ${this.ql} and also ${greet}`)
+}
+const obj={
+    name:"salman",
+    age:21,
+    ql:"bca"
+}
+student.call(obj,"thank you for support")
 
     </script>
 </body>
